@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:work1/config/constant.dart';
 
 class Index extends StatelessWidget {
+  Route<Object?>? get login => null;
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -40,14 +43,15 @@ class Index extends StatelessWidget {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   textStyle: TextStyle(
-                    fontSize: 20,
+                    fontSize: sFont,
                   ),
-                  primary: Colors.amber[900],
+                  primary: pColor,
                   padding: EdgeInsets.all(12.0),
                   shape: StadiumBorder()),
               child: Text('Login'),
               onPressed: () {
                 print("Login!!");
+                Navigator.pushNamed(context, 'login');
               },
             ),
             SizedBox(
@@ -56,14 +60,15 @@ class Index extends StatelessWidget {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   textStyle: TextStyle(
-                    fontSize: 20,
+                    fontSize: sFont,
                   ),
-                  primary: Colors.amber[900],
+                  primary: sColor,
                   padding: EdgeInsets.all(12.0),
                   shape: StadiumBorder()),
-              child: Text('Sign In'),
+              child: Text('Sign Up'),
               onPressed: () {
-                print("Sign In!!");
+                print("Sign Up!!");
+                Navigator.pushNamed(context, 'register');
               },
             ),
           ],
