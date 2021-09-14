@@ -55,7 +55,7 @@ class _RegisterState extends State<Register> {
           if (val!.isEmpty) {
             return 'กรุณากรอกข้อมูล';
           } else if (val.length < 3) {
-            return 'กรุณากรอกข้อมูลมากกว่า 2 ตัวอักษร';
+            return 'กรุณากรอกข้อมูลมากกว่า 3 ตัวอักษร';
           }
         },
         onSaved: (val) {
@@ -82,7 +82,7 @@ class _RegisterState extends State<Register> {
           if (val!.isEmpty) {
             return 'กรุณากรอกข้อมูล';
           } else if (val.length < 3) {
-            return 'กรุณากรอกข้อมูลมากกว่า 2 ตัวอักษร';
+            return 'กรุณากรอกข้อมูลมากกว่า 3 ตัวอักษร';
           }
         },
         onSaved: (val) {
