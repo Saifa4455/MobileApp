@@ -3,8 +3,11 @@ import 'package:work1/config/constant.dart';
 import 'package:work1/screen/dashboard.dart';
 import 'package:work1/screen/homepage.dart';
 import 'package:work1/index.dart';
+import 'package:work1/screen/location.dart';
 import 'package:work1/screen/login.dart';
 import 'package:work1/screen/register.dart';
+import 'package:work1/screen/video.dart';
+import 'package:work1/screen/image.dart';
 
 void main() {
   runApp(Myapp());
@@ -24,6 +27,9 @@ class Myapp extends StatelessWidget {
         'login': (context) => Login(),
         'register': (context) => Register(),
         'dashboard': (context) => Dashboard(),
+        'video': (context) => Video(),
+        'image': (context) => Imagemenu(),
+        'location': (context) => Location(),
       },
       home: Index(),
     );
