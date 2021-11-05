@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:work1/config/constant.dart';
@@ -36,6 +37,10 @@ class _DashboardState extends State<Dashboard> {
     print(response.body);
   }
 
+  Future<void> logout() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -70,7 +75,25 @@ class _DashboardState extends State<Dashboard> {
                   print('Menu Location');
                   Navigator.pushNamed(context, 'location');
                 },
-              )
+              ),
+              ListTile(
+                title: Text('Store'),
+                leading: Icon(Icons.store_mall_directory_rounded),
+                onTap: () {
+                  print('Menu Store');
+                  Navigator.pushNamed(context, 'store');
+                },
+              ),
+              ListTile(
+                title: Text('Logout'),
+                leading: Icon(Icons.exit_to_app_rounded),
+                onTap: () {
+                  print('Menu Logout');
+                  logout();
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(context, 'login');
+                },
+              ),
             ],
           ),
         ),

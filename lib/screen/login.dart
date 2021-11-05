@@ -20,6 +20,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Login'),
+        backgroundColor: pColor,
       ),
       body: Form(
         key: formkey,
